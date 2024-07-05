@@ -37,7 +37,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: config of kubeconfig
-        run: aws eks update-kubeconfig --name aula-eks
+        run: aws eks update-kubeconfig --name eks-aula
       - name: Deploy no kubernetes
         uses: Azure/k8s-deploy@v5
         with:
