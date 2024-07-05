@@ -21,7 +21,7 @@ jobs:
           context: ./src
           push: true
           file: ./src/Review-Filmes.Web/Dockerfile
-          tags: 
+          tags: |
             takahashidt/review-filmes:v${{ github.run_number }}
             takahashidt/review-filmes:latest
   CD:
