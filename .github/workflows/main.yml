@@ -38,3 +38,10 @@ jobs:
           aws-region: us-east-1
       - name: config of kubeconfig
         run: aws eks update-kubeconfig --name aula-eks
+      - name: Deploy no kubernetes
+        uses: Azure/k8s-deploy@v5
+        with:
+           manifests: |
+              ./k8s/deployment.yaml
+           images: |
+             takahashidt/review-filmes:v${{ github.run_number }}
