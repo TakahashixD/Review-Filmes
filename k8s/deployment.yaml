@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: postgre
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels: 
       app: postgre
@@ -53,7 +53,7 @@ spec:
     spec:
       containers:
         - name: reviewfilmes
-          image: takahashidt/review-filmes:v1
+          image: takahashidt/review-filmes:v2
           env:
             - name: ASPNETCORE_HTTP_PORTS
               value: "8080"
@@ -72,5 +72,5 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30000
-  type: NodePort
+      #nodePort: 30000
+  type: LoadBalancer
