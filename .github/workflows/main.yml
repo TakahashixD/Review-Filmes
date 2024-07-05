@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Passo 01
-        run: echo "Construir imagem do app"
+        run: echo "Construir imagm do app"
       - name: Passo 02
         run: echo "Publicar a imagem no docker hub"
   CD:
