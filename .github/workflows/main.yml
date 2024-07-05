@@ -22,7 +22,7 @@ jobs:
           push: true
           file: ./src/Review-Filmes.Web/Dockerfile
           tags: 
-            takahashidt/review-filmes:v${{github.run_number}}
+            takahashidt/review-filmes:v${{ github.run_number }}
             takahashidt/review-filmes:latest
   CD:
     runs-on: ubuntu-latest
